@@ -1,0 +1,42 @@
+.card {
+  margin: 60px;
+}
+
+.mood-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 40%;
+    background-color: #aaaae1;
+
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 70px;
+}
+
+.toggle-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 40%;
+    margin-top: 50px;
+    height: 141px;
+    
+}
+
+.playing-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 40%;
+    margin-top: 50px;
+    height: 141px;
+}
