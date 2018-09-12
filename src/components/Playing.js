@@ -3,15 +3,32 @@ import React from 'react';
 let color1 = 'rgb(198, 28, 111)';
 let color2 = 'rgb(247, 240, 199)';
 let black = '#000000';
-let white = '#FFFFFF'
+let white = '#ffffff';
+let pStyle = {
+    color:'white',
+    textAlign: 'center',
+    width: 400,
+    marginLeft: '33%'
+ 
+}
+let buttonStyle = {
+    color: 'grey'
+}
+
+
+
 
 class Playing extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            color: color1
+            color: color1,
+            message: 'Click on this text to add your name!!!',
+            userInput: ''
         }
         this.changeColor = this.changeColor.bind(this);
+        this.simpleAlert = this.simpleAlert.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     changeColor() {
@@ -22,17 +39,45 @@ class Playing extends React.Component {
         })
     }
 
+    simpleAlert() {
+        let name = prompt('Enter full name');
+        this.setState({
+          message: name
+        })
+      }
+
+      handleChange(event) {
+          this.setState({
+              userInput: event.target.value
+          })
+          console.log(event.target.value);
+      }
+
 
     render() { 
         return (  
             <div 
                 style={{ background: black }}
                 className="playing-container">
-                <p
-                style={{ color: white}}>{this.props.tryThis}</p>
+                <p 
+                  onClick={this.simpleAlert}
+                  style={pStyle}>{this.state.message}</p>
                 <button
-                    onClick={this.changeColor}
-                    style={{background: this.state.color}}>Hit To Change Color</button>
+                  onClick={this.changeColor}
+                  className="sillybtn"
+                  style={{background: this.state.color}}>Hit To Change Color</button>
+               
+                  <h2>{this.state.userInput}</h2>
+                  <input
+                    className="user-input" 
+                    onChange={this.handleChange}
+                    value={this.state.userInput}
+                    type="text" 
+                    maxLength="120"
+                    placeholder="Maximum Charaters: 120"
+                    onkeypress="mici"
+                   />
+                  
             </div>
         );
     }

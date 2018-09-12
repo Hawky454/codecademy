@@ -17,7 +17,7 @@ button {
     height: 40px;
     border: 1px solid black;
     border-radius: 5px;
-    margin-left: 70px;
+    margin-left: 10%;
 }
 
 .toggle-container {
@@ -33,10 +33,23 @@ button {
 
 .playing-container {
     border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    padding-left: 40%;
+
     margin-top: 50px;
-    height: 141px;
+    height: 250px;
+}
+
+.sillybtn {
+    margin-left: 45%;
+}
+
+h2 {
+    height: 40px;
+    color: white;
+}
+
+.user-input {
+   margin-left: 33%;
+   border-radius: 5px;
+   width: 400px;
+   height: 30px;
 }
